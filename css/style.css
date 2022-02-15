@@ -1,0 +1,84 @@
+/* reset css */
+html{
+    font-size: 62.5%; /* 
+    100%  px, pt, em, vh, vw % 
+    16*62.5% = 1.000 rem
+    */
+}
+body{
+    font: 1.6rem  sans-serif;
+    margin: 0;
+}
+h1, h2, h3, h4, p, ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+h1, h2, h3, h4{
+    font-weight: normal; /* permet d'avoir une police sans graisse */
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+/* reset spécial pour l'image */
+img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+/* p{
+   color: rgba(0,0,200,1);
+} */
+/* box-sizing */
+
+/* theme css */
+/* palette graphique */
+:root{
+    --color-primary: #2b2a33;
+    --color-secondary: #42414d;
+    --color-default-text: #fff;
+}
+body{
+   background-color: var(--color-primary);
+   color: var(--color-default-text);
+   line-height: 1.6;
+}
+header h1{
+    text-align: center;
+    font-size: 4rem; /* rem => px */
+    line-height: 7.5rem;
+}
+/* 
+modification main et section
+sélecteurs et propriétés
+*/
+section h2{
+    text-transform: uppercase;
+   
+}
+section p{
+    /* font-style: italic; */
+}
+section h2, :is(p), section h3, :is(li)/* section p */{
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}   
+section:nth-child(2) ul li:first-child{
+    background-color: #222;
+}
+main, footer{
+    max-width: 80.0rem;
+    margin: 5rem auto;
+    border: solid .1rem #222;
+    
+    
+}
+footer{
+    margin-top: 0;
+}
+footer p{
+    text-align: center;
+}
