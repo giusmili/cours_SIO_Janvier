@@ -40,6 +40,31 @@ img{
     --color-primary: #2b2a33;
     --color-secondary: #42414d;
     --color-default-text: #fff;
+    --color-btn-default: #ccc;
+}
+/* boutons */
+.btn-default{
+    display: inline-block;
+    width: 20rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: var(--color-primary);
+    background-color: var(--color-btn-default);
+    border-radius: .8rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    letter-spacing: .1rem;
+    font-weight: bolder;
+}
+/* end button */
+/* theme boutons */
+.btn-primary{
+    background-color: #2980b9;
+    color: #fff;
+}
+.btn-large{
+    width: 30.0rem;
 }
 body{
    background-color: var(--color-primary);
@@ -51,10 +76,18 @@ header h1{
     font-size: 4rem; /* rem => px */
     line-height: 7.5rem;
 }
+main, footer, section:nth-child(3){
+    border-radius: .8rem;
+    overflow: hidden;
+}
 /* 
 modification main et section
 sélecteurs et propriétés
 */
+section:not(section:last-child){
+    margin-bottom: 1rem;
+}
+
 section h2{
     text-transform: uppercase;
    
@@ -66,7 +99,7 @@ section h2, :is(p), section h3, :is(li)/* section p */{
     background-color: var(--color-secondary);
     padding: 1rem;
 }   
-section:nth-child(2) ul li:first-child{
+section:nth-child(2) ul li:nth-child(2n+1){
     background-color: #222;
 }
 main, footer{
