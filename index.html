@@ -64,8 +64,7 @@
        
            <p>
                <em>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Incidunt, inventore.
+                Chargement...
                </em>
             </p>
         </section>
@@ -92,6 +91,15 @@
             </p>
             
         </footer>
+        <script>
+            window.addEventListener("load",(e)=>{
+                console.log(e.target)
+            const navigator_user = navigator.userAgent
+            const el = document.querySelector("section:nth-child(3) > p > em")
+            el.innerText = `Voitre navigateur est  : ${navigator_user}`
+
+            })
+        </script>
    
     
 </body>
