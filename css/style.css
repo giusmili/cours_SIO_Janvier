@@ -12,10 +12,11 @@ body{
     font: 1.6rem  'Mukta Vaani', sans-serif;
     margin: 0;
 }
-h1, h2, h3, h4, p, ul{
+h1, h2, h3, h4, p, ul, figure{
     margin: 0;
     padding: 0;
     list-style-type: none;
+    
 }
 h1, h2, h3, h4{
     font-weight: normal; /* permet d'avoir une police sans graisse */
@@ -23,6 +24,9 @@ h1, h2, h3, h4{
 a{
     text-decoration: none;
     color: #222;
+}
+*{
+    box-sizing: border-box;
 }
 /* reset spécial pour l'image */
 img{
@@ -112,11 +116,42 @@ section h2, :is(p), section h3, :is(li)/* section p */{
 section:nth-child(2) ul li:nth-child(2n+1){
     background-color: #222;
 }
+/* logos */
+.content-logo-icon ul{
+    margin-top: 1rem;
+    overflow: hidden;
+    padding-left: 1rem;
+    
+}
+.content-logo-icon li{
+   background-color: inherit; /* hériter du bgc du parent */
+   width: calc(100% / 6 - 1rem); /* diviser le nombre d'élément contenu dans le parent */
+   padding: 2rem;
+   float: left; /* sortir du flux de la page */
+   margin-right: 1rem;
+   background-color: var(--color-secondary);
+   border-radius: .8rem
+}
+.content-logo-icon li:last-child{
+    margin: 0;
+}
+.content-logo-icon h3{
+    border-radius: .8rem;
+}
+.content-logo-icon ul figure img{
+   
+}
+.content-logo-icon ul figure figcaption h4{
+    text-align: center;
+}
+.content-logo-icon{
+    border: none;
+}
+
+/* end logo */
 main, footer{
     max-width: 90.0rem;
     margin: 5rem auto;
-    border: solid .1rem #222;
-    
     
 }
 footer{
